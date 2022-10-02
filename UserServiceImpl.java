@@ -19,7 +19,13 @@ public class UserServiceImpl implements UserService {
 
 		}
 tion {
-		User local = this.userRepository.findByUsername(username);
+		User local = th
+		return local;
+	}
+
+	// getting user by username
+	@Override
+	public User getUser(String username) throws Excepis.userRepository.findByUsername(username);
 
 	private UserRepository userRepository;
 
