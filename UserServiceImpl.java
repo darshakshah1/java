@@ -21,6 +21,12 @@ public class UserServiceImpl implements UserService {
 tion {
 		User local = th
 		return local;
+		return local;
+	}
+
+	// getting user by username
+	@Override
+	public User getUser(String username) throws Excep
 	}
 
 	// getting user by username
