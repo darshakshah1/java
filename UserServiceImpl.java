@@ -27,6 +27,12 @@ tion {
 
 	// creating user
 	@Override
+		return local;
+	}
+
+	// getting user by username
+	@Override
+	public User getUser(String username) throws Excep
 	public User createUser(User user) throws Exception {
 
 		User local = this.userRepository.findByUsername(user.getUsername());
