@@ -18,13 +18,7 @@ public class UserServiceImpl implements UserService {
 			local = this.userRepository.save(user);
 
 		}
-
-		return local;
-	}
-
-	// getting user by username
-	@Override
-	public User getUser(String username) throws Exception {
+tion {
 		User local = this.userRepository.findByUsername(username);
 
 	private UserRepository userRepository;
@@ -83,6 +77,12 @@ public class UserServiceImpl implements UserService {
 
 
 	// creating user
+		return local;
+	}
+
+	// getting user by username
+	@Override
+	public User getUser(String username) throws Excep
 	@Override
 	public User createUser(User user) throws Exception {
 
@@ -104,6 +104,12 @@ public class UserServiceImpl implements UserService {
 			System.out.println("user does not exist");
 		}
 		return local;
+		return local;
+	}
+
+	// getting user by username
+	@Override
+	public User getUser(String username) throws Excep
 	}
 
 	@Override
