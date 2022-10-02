@@ -28,7 +28,19 @@ public class UserServiceImpl implements UserService {
 		User local = this.userRepository.findByUsername(username);
 
 		if (local == null) {
-			System.out.println("user not exist");
+			System.out.
+	private UserRepository userRepository;
+
+
+
+	// creating user
+	@Override
+	public User createUser(User user) throws Exception {
+
+		User local = this.userRepository.findByUsername(user.getUsername());
+		if (local != null) {
+			System.out.println("User already exists");
+			throw new Exception("User alreprintln("user not exist");
 			throw new Exception("user not exist");
 		}
 		return local;
