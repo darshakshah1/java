@@ -13,19 +13,7 @@ import com.investapp.services.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	private UserRepository userRepository;
-
-
-
-	// creating user
-	@Override
-	public User createUser(User user) throws Exception {
-
-		User local = this.userRepository.findByUsername(user.getUsername());
-		if (local != null) {
-			System.out.println("User already exists");
-			throw new Exception("User already exists");
+	@Autowiredady exists");
 		} else {
 			local = this.userRepository.save(user);
 
@@ -60,7 +48,19 @@ public class UserServiceImpl implements UserService {
 			local.setFirstname(user.getFirstname());
 			local.setLastname(user.getLastname());
 			local.setEmail(user.getEmail());
-			local.setPassword(user.getPassword());
+			
+	private UserRepository userRepository;
+
+
+
+	// creating user
+	@Override
+	public User createUser(User user) throws Exception {
+
+		User local = this.userRepository.findByUsername(user.getUsername());
+		if (local != null) {
+			System.out.println("User already exists");
+			throw new Exception("User alrelocal.setPassword(user.getPassword());
 			local.setPhone(user.getPhone());
 			local.setProfile(user.getProfile());
 			this.userRepository.save(local);
